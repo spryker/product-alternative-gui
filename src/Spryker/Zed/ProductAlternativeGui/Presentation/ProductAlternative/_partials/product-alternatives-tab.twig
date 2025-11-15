@@ -12,10 +12,8 @@
     {{ form_widget(form['alternative_products']) }}
 </div>
 
-<div id="items" class="col-sm-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-    <div>
-        {% include '@ProductAlternativeGui/ProductAlternative/blocks/product-alternatives-table.twig' %}
-    </div>
+<div id="items">
+    {% include '@ProductAlternativeGui/ProductAlternative/blocks/product-alternatives-table.twig' %}
 </div>
 
 <script src="{{ assetsPath('js/spryker-zed-product-alternative-assign.js') }}"></script>
