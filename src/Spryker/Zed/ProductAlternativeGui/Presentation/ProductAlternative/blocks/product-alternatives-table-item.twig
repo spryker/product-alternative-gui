@@ -9,7 +9,7 @@
 <td>{{ productAlternative.type | capitalize | trans }}</td>
 <td>
     {% if productAlternative.status %}
-        <span class="label label-info">{{ 'Active' | trans }}</span>
+        <span class="label label-primary">{{ 'Active' | trans }}</span>
     {% else %}
         <span class="label label-danger">{{ 'Inactive' | trans }}</span>
     {% endif %}
