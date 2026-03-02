@@ -13,24 +13,9 @@ use Generated\Shared\Transfer\ProductConcreteTransfer;
 
 interface ProductAlternativeGuiToProductAlternativeFacadeInterface
 {
-    /**
-     * @param int $idProductConcrete
-     *
-     * @return \Generated\Shared\Transfer\ProductAlternativeListTransfer
-     */
     public function getProductAlternativeListByIdProductConcrete(int $idProductConcrete): ProductAlternativeListTransfer;
 
-    /**
-     * @param int $idProductAlternative
-     *
-     * @return \Generated\Shared\Transfer\ProductAlternativeResponseTransfer
-     */
     public function deleteProductAlternativeByIdProductAlternative(int $idProductAlternative): ProductAlternativeResponseTransfer;
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     public function persistProductAlternative(ProductConcreteTransfer $productConcreteTransfer): ProductConcreteTransfer;
 }

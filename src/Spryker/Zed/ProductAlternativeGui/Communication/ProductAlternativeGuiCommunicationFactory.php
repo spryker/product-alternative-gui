@@ -15,25 +15,16 @@ use Spryker\Zed\ProductAlternativeGui\ProductAlternativeGuiDependencyProvider;
 
 class ProductAlternativeGuiCommunicationFactory extends AbstractCommunicationFactory
 {
-    /**
-     * @return \Spryker\Zed\ProductAlternativeGui\Communication\Form\AddProductAlternativeForm
-     */
     public function createAddProductAlternativeForm(): AddProductAlternativeForm
     {
         return new AddProductAlternativeForm();
     }
 
-    /**
-     * @return \Spryker\Zed\ProductAlternativeGui\Dependency\Facade\ProductAlternativeGuiToProductFacadeInterface
-     */
     public function getProductFacade(): ProductAlternativeGuiToProductFacadeInterface
     {
         return $this->getProvidedDependency(ProductAlternativeGuiDependencyProvider::FACADE_PRODUCT);
     }
 
-    /**
-     * @return \Spryker\Zed\ProductAlternativeGui\Dependency\Facade\ProductAlternativeGuiToProductAlternativeFacadeInterface
-     */
     public function getProductAlternativeFacade(): ProductAlternativeGuiToProductAlternativeFacadeInterface
     {
         return $this->getProvidedDependency(ProductAlternativeGuiDependencyProvider::FACADE_PRODUCT_ALTERNATIVE);

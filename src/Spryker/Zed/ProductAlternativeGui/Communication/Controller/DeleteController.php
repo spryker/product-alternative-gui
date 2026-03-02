@@ -37,11 +37,6 @@ class DeleteController extends AbstractController
      */
     protected const KEY_TAB_PRODUCT_ALTERNATIVE = '#tab-content-alternatives';
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     public function deleteAlternativeAction(Request $request): RedirectResponse
     {
         $idProductAlternative = $this->castId($request->get(static::FIELD_ID_PRODUCT_ALTERNATIVE));
@@ -57,11 +52,6 @@ class DeleteController extends AbstractController
         return $this->redirectToReferer($request);
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductAlternativeResponseTransfer $productAlternativeResponseTransfer
-     *
-     * @return void
-     */
     protected function handleProductAlternativeDeletion(ProductAlternativeResponseTransfer $productAlternativeResponseTransfer): void
     {
         if ($productAlternativeResponseTransfer->getIsSuccessful()) {
@@ -75,11 +65,6 @@ class DeleteController extends AbstractController
         $this->addErrorMessage(static::MESSAGE_DELETE_PRODUCT_ALTERNATIVE_ERROR);
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     protected function redirectToReferer(Request $request): RedirectResponse
     {
         return $this->redirectResponseExternal($request->headers->get('referer') . static::KEY_TAB_PRODUCT_ALTERNATIVE);

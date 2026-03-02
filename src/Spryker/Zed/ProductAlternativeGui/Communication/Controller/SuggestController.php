@@ -41,11 +41,6 @@ class SuggestController extends AbstractController
      */
     protected const TEXT_FORMAT = '%s (sku: %s)';
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\JsonResponse
-     */
     public function indexAction(Request $request): JsonResponse
     {
         $suggestion = (string)$request->query->get(static::PARAM_NAME, '');
@@ -66,11 +61,6 @@ class SuggestController extends AbstractController
         ]);
     }
 
-    /**
-     * @param array $suggestData
-     *
-     * @return array
-     */
     protected function prepareData(array $suggestData): array
     {
         $preparedSuggestData = [];

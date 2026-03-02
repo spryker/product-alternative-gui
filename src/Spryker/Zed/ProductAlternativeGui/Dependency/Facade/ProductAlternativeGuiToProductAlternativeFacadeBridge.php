@@ -26,22 +26,12 @@ class ProductAlternativeGuiToProductAlternativeFacadeBridge implements ProductAl
         $this->productAlternativeFacade = $productAlternativeFacade;
     }
 
-    /**
-     * @param int $idProductConcrete
-     *
-     * @return \Generated\Shared\Transfer\ProductAlternativeListTransfer
-     */
     public function getProductAlternativeListByIdProductConcrete(int $idProductConcrete): ProductAlternativeListTransfer
     {
         return $this->productAlternativeFacade
             ->getProductAlternativeListByIdProductConcrete($idProductConcrete);
     }
 
-    /**
-     * @param int $idProductAlternative
-     *
-     * @return \Generated\Shared\Transfer\ProductAlternativeResponseTransfer
-     */
     public function deleteProductAlternativeByIdProductAlternative(int $idProductAlternative): ProductAlternativeResponseTransfer
     {
         return $this->productAlternativeFacade
@@ -50,11 +40,6 @@ class ProductAlternativeGuiToProductAlternativeFacadeBridge implements ProductAl
             );
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductConcreteTransfer $productConcreteTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductConcreteTransfer
-     */
     public function persistProductAlternative(ProductConcreteTransfer $productConcreteTransfer): ProductConcreteTransfer
     {
         return $this->productAlternativeFacade
