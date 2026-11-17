@@ -68,9 +68,9 @@ class AddProductAlternativeForm extends AbstractType
      */
     protected function getProductAlternativeSearchPreSubmitCallback(): callable
     {
-        return function (FormEvent $e) {
-            $data = $e->getData();
-            $form = $e->getForm();
+        return function (FormEvent $event) {
+            $data = $event->getData();
+            $form = $event->getForm();
             if (empty($data[static::FIELD_PRODUCT_ALTERNATIVE])) {
                 return;
             }
